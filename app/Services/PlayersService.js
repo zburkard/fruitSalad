@@ -7,8 +7,7 @@ class PlayersService {
   createPlayer(formData) {
     let newPlayer = new Player(formData)
     appState.players = [...appState.players, newPlayer]
-    let test = saveState('players', Player)
-    // saveState('players', appState.activePlayer.score)
+    saveState('players', Player)
     console.log("Test:", test)
   }
 

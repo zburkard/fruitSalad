@@ -6,8 +6,8 @@ export class Fruit {
 
   get FruitTemplate() {
     return `
-    <div class="col-4 card">
-        <div>${this.name}</div>
+    <div class="col-4 card text-center">
+        <span>${this.name}</span>
         <input type="text" id="fruit" name="fruit">
         <button>Enter</button>
       </div>

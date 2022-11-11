@@ -13,10 +13,12 @@ export class Player {
 
   get ListTemplate() {
     return `
-    <div onclick="app.playersController.setActivePlayer('${this.id}')" class="col-4 card shadow selectable">
-    <h1>${this.name}</h1>\
-    <h1>${this.score}</h1>
+    <section class="row m-2">
+    <div onclick="app.playersController.setActivePlayer('${this.id}')" class="col-2 card shadow selectable p-2">
+    <h4>${this.name}</h4>\
+    <h6>High Score: ${this.highScore}</h6>
   </div>
+  </section>
     `
   }
 
@@ -28,7 +30,7 @@ export class Player {
       <label for="name" class="name-label">name</label>
       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="name" class="form-text"></div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button class="btn btn-primary">Submit</button>
   </form>
 </div>
     `
@@ -36,11 +38,13 @@ export class Player {
 
   get ActivePlayerTemplate() {
     return `
-    <div class="col-3 card">
-          <div>${this.name}</div>
-          <div>${this.score}</div>
-          <div>${this.highScore}</div>
+    <section class="row justify-content-center">
+    <div class="card col-2 p-3 bg-primary text-light mt-3">
+          <h5>Current Player:${this.name}</h5>
+          <h6>Current Score:${this.score}</h6>
+          <h6>High Score:${this.highScore}</h6>
         </div>
+    </section>
     
     `
   }

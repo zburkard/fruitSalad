@@ -10,8 +10,8 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState('values', [Value])
 
-  players = loadState('players', [Player])
-  // players = []
+  // players = loadState('players', [Player])
+  players = []
 
   activePlayer = null
 
