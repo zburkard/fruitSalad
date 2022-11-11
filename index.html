@@ -26,11 +26,43 @@
     </nav>
   </header>
   <main>
+    <section class="row" id="players">
+      <!-- <div class="col-4 card shadow">
+        <h1>name</h1>\
+        <h1>score</h1>
+      </div> -->
+    </section>
+    <section class="row">
+      <div class="col-4">
+        <form onsubmit="app.playersController.createPlayer()">
+          <div class="mb-3">
+            <label for="name" class="name-label">name</label>
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
+            <div id="name" class="form-text"></div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
-        </div>
+      <div id="active-player" class="row ">
+        <!-- <div class="col-3 card">
+          <div>Player Name</div>
+          <div>Score</div>
+          <div>High Score</div>
+        </div> -->
+      </div>
+      <div>
+        <section class="row justify-content-center">
+          <div class="col-4 card shadow d-flex justify-content-center">
+            <div id="fruit-word"></div>
+            <form onsubmit="app.playersController.checkFruitForm()">
+              <input type="text" class="form-control" id="fruit-word" name="fruitWord" aria-describedby="fruit-word">
+            </form>
+            <button class="col-3 d-flex justify-content-center">submit</button>
+          </div>
+          <div>
+          </div>
+        </section>
       </div>
     </div>
   </main>
